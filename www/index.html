@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Hello World</title>
+    </head>
+    <body>
+        
+        <script src="cordova.js"></script>
+        <script type="text/javascript">
+            document.addEventListener('deviceready', function(){
+                navigator.serviceWorker.register('sw.js', { scope: '/' })
+                    .then(registration => {
+                        console.log('Service worker registered:', registration);
+                    })
+                    .catch(error => {
+                        console.error('Service worker registration failed:', error);
+                    });
+            
+            cordova.InAppBrowser.open('https://brilliantlight.netlify.app/', '_blank', 'location=no, zoom=no, toolbar=no');
+            });
+            </script>
+    </body>
+</html>
