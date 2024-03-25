@@ -8,16 +8,8 @@
         
         <script src="cordova.js"></script>
         <script type="text/javascript">
-            document.addEventListener('deviceready', function(){
-                navigator.serviceWorker.register('sw.js', { scope: '/' })
-                    .then(registration => {
-                        console.log('Service worker registered:', registration);
-                    })
-                    .catch(error => {
-                        console.error('Service worker registration failed:', error);
-                    });
-            
-            cordova.InAppBrowser.open('https://brilliantlight.netlify.app/', '_blank', 'location=no, zoom=no, toolbar=no');
+            document.addEventListener('deviceready', function(){            
+            cordova.InAppBrowser.open('https://lawrencemercado.infinityfreeapp.com/login/index.php', '_blank', 'location=no', 'zoom = no', 'toolbar=no');
             });
             </script>
     </body>
